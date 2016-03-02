@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+
+<div id="mycanvas_panel"><canvas id="mycanvas" width="500" height="300"></canvas></div>
+<div id="mycanvas_panel_coordinates"></div>
+
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+}
+#mycanvas_panel {
+	width: 500px;
+	height: 300px;
+	border: 1px solid #000000;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+//获取鼠标点坐标
+$("#mycanvas_panel").mousemove(function(event) {
+	$("#mycanvas_panel_coordinates").html("coordinates(" + event.clientX + "," + event.clientY + ")");
+}).mouseout(function(event) {
+	$("#mycanvas_panel_coordinates").html("");
+});
+
+var mycanvasClass = function (){
+	//myCanvas绘图
+	var canvasObject = document.getElementById("mycanvas");
+	var canvasContext = canvasObject.getContext('2d');
+
+	//矩形
+	canvasContext.fillStyle = "#FF0000";
+	canvasContext.fillRect(0, 0, 300, 150);
+
+	//线
+	canvasContext.moveTo(10, 10);
+	canvasContext.lineTo(150, 10);
+	canvasContext.lineTo(10, 50);
+	canvasContext.stroke();
+
+	//圆
+	canvasContext.fillStyle = "#336699";
+	canvasContext.beginPath();
+	canvasContext.arc(300, 100, 20, 0, Math.PI*2, true);
+	canvasContext.closePath();
+	canvasContext.fill();
+}
+new mycanvasClass();
+});
+</script>
+</body>
+</html>
