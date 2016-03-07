@@ -2,17 +2,25 @@
 define(["app", "commoncontroller", "userservice"], function ($app, $commoncontroller){
 	var WebApp = $app.WebApp;
 
-	var init = function (){
-		WebApp.controller("UserController", ['$scope', '$controller', 'UserService', function ($scope, $controller, $UserService) {
+	var UserListControllerInit = function (){
+		WebApp.controller("UserListController", ['$scope', '$controller', 'UserService', function ($scope, $controller, $UserService) {
 			var CommonController = $controller('CommonController', {$scope: $scope});
 
-			alert($UserService.testdata.a);
-			$UserService.getDatatest();
-			alert($UserService.testdata.a);
+			//监听事件 - getUserList.success
+			$scope.$on('getUserList.success', function (event){
+				$scope.userlist = $UserService.userlist;
+			});
+
+			$UserService.getUserList();
 		}]);
 	}
 
+	var UserProfileControllerInit = function (){
+		
+	}
+
 	return {
-		init: init
+		UserListControllerInit: UserListControllerInit,
+		UserProfileControllerInit: UserProfileControllerInit
 	}
 });

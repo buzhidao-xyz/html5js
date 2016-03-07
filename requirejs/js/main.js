@@ -1,6 +1,8 @@
 //init
 requirejs(["./config"], function (){
-	requirejs(["app"], function ($app){
-		$app.helloworld();
+	requirejs(["function"], function ($function){
+        $function.HelloWorld();
+        
+		$function.getHtml();
 	});
 });

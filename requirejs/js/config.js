@@ -4,6 +4,7 @@ requirejs.config({
 	//包名-路径
 	paths: {
 		"app": "app",
+		"function": "function",
 		"jquery": "../../assets/js/jquery-2.1.4.min",
 		"bootstrap": "../../assets/bootstrap-3.3.4/js/bootstrap.min",
 		"angular": "../../assets/angular-1.4.2/angular.min",
@@ -18,6 +19,10 @@ requirejs.config({
 	},
 	//包依赖
 	shim: {
+		"function": {
+			deps: ["jquery"],
+			exports: "function"
+		},
 		"angular": {
 			exports: "angular"
 		},
