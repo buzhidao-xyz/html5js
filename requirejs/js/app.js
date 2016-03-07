@@ -1,14 +1,14 @@
 //appjs
-define(["require", "angular"], function (require, angular){
+define(["require", "angular", "angular-route"], function (require, angular){
 	var helloworld = function (){
 		alert("Hello World!");
 	}
 
-	var RequireJSApp = angular.module("RequireJSApp", []);
+	var WebApp = angular.module("WebApp", ["ngRoute"]);
 
 	//返回模块对象
 	return {
 		helloworld: helloworld,
-		RequireJSApp: RequireJSApp
+		WebApp: WebApp
 	}
 });

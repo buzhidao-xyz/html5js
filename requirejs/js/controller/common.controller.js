@@ -1,8 +1,8 @@
 //定义模块CommonController
-define(["app"], function (app){
-	var RequireJSApp = app.RequireJSApp;
+define(["app"], function ($app){
+	var WebApp = $app.WebApp;
 
-	RequireJSApp.controller("CommonController", ['$scope', function ($scope) {
+	WebApp.controller("CommonController", ['$scope', function ($scope) {
 		$scope.helloworld = "Hello World!";
 
 		$scope.newhelloworld = function () {
