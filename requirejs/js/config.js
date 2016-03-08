@@ -5,7 +5,8 @@ requirejs.config({
 	paths: {
 		"app": "app",
 		"function": "function",
-		"jquery": "../../assets/js/jquery-2.1.4.min",
+		"jquery": "../../assets/jquery/jquery-2.1.4.min",
+		"jquery.purl": "../../assets/jquery/jquery.purl",
 		"bootstrap": "../../assets/bootstrap-3.3.4/js/bootstrap.min",
 		"angular": "../../assets/angular-1.4.2/angular.min",
 		"angular-route": "../../assets/angular-1.4.2/angular-route.min",
@@ -37,6 +38,10 @@ requirejs.config({
 		"bootstrap": {
 			deps: ["jquery"],
 			exports: "bootstrap"
+		},
+		"jquery.purl": {
+			deps: ["jquery"],
+			exports: "jquery.purl"
 		}
 	},
 	//不缓存js

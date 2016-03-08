@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>UserProfile - RequireJS Test Page</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <script src="../assets/js/require-2.1.11.min.js" data-main="js/user.js"></script>
+	<title>UserProfile - RequireJS Test Page</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<link href="../assets/css/common.css" rel="stylesheet" />
+    <link href="../assets/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+
+	<script src="../assets/js/require-2.1.11.min.js" data-main="js/user.js"></script>
 </head>
 
 <body ng-controller="UserProfileController">
     <div id="Container" class="container">
-        <p>{{$userprofile.name}}</p>
+        <p class="ng-cloak">{{$userprofile.username}}</p>
     </div>
 </body>
 </html>

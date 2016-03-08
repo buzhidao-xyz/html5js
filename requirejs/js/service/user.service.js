@@ -4,6 +4,7 @@ define(["app", "api"], function ($app, $api){
 
 	WebApp.service('UserService', ['$rootScope', '$http', function ($rootScope, $http){
 		var Service = {
+			//getUserList
 			getUserListParams: {},
 			userlist: {},
 			getUserList: function (){
@@ -17,7 +18,28 @@ define(["app", "api"], function ($app, $api){
 
 					$rootScope.$broadcast('getUserList.success');
 				}).error(function (data, status){
-					$rootScope.$broadcast('getUserList.failed');
+					$rootScope.$broadcast('apiRequest.failed');
+				});
+			},
+
+			//getUserProfile
+			userprofile: {
+				"userid": 0,
+				"username": "",
+				"age": 0
+			},
+			getUserProfile: function (){
+				var url = $api.host + $api.userprofile.u;
+				$http({
+					method: $api.userlist.m,
+					url: url,
+					params: {}
+				}).success(function (data, status){
+					Service.userprofile = data;
+
+					$rootScope.$broadcast('getUserProfile.success');
+				}).error(function (data, status){
+					$rootScope.$broadcast('apiRequest.failed');
 				});
 			}
 		}

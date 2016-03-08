@@ -4,6 +4,10 @@ define([], function (){
         userlist: {
             m: "get",
             u: "api/userlist.json"
+        },
+        userprofile: {
+        	m: "get",
+        	u: "api/userprofile.json"
         }
     }
 });

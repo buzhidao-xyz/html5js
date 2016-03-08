@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>User - RequireJS Test Page</title>
+	<title>UserList - RequireJS Test Page</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 
+	<link href="../assets/css/common.css" rel="stylesheet" />
     <link href="../assets/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+
 	<script src="../assets/js/require-2.1.11.min.js" data-main="js/user.js"></script>
 </head>
 
@@ -14,7 +17,7 @@
 	<div id="Container" class="container">
 		<ul class="list-unstyled">
             <li ng-repeat="$user in $userlist">
-                <div ng-cloak class="ng-cloak">{{$user.username}}</div>
+                <a href="userprofile.html?userid={{$user.userid}}" ng-cloak class="ng-cloak">{{$user.username}}</a>
             </li>
         </ul>
 	</div>
