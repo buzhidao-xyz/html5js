@@ -1,0 +1,19 @@
+{
+    "userlist": [
+        {
+            "userid": 1,
+            "username": "buzhidao",
+            "age": 30
+        },
+        {
+            "userid": 2,
+            "username": "zhangsansan",
+            "age": 31
+        },
+        {
+            "userid": 3,
+            "username": "lixiaoyu",
+            "age": 32
+        }
+    ]
+}

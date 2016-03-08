@@ -8,7 +8,7 @@ define(["app", "commoncontroller", "userservice"], function ($app, $commoncontro
 
 			//监听事件 - getUserList.success
 			$scope.$on('getUserList.success', function (event){
-				$scope.userlist = $UserService.userlist;
+				$scope.$userlist = $UserService.userlist;
 			});
 
 			$UserService.getUserList();
