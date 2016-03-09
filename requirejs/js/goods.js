@@ -1,6 +1,6 @@
 //goods.js
 requirejs(['./config'], function (){
-	requirejs([], function (){
-        
+	requirejs(['goodscontroller'], function ($goodscontroller){
+        $goodscontroller.GoodsControllerInit();
 	});
 });
