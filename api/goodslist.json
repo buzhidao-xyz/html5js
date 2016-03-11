@@ -1,0 +1,19 @@
+{
+    "goodslist": [
+        {
+            "goodsid": 1,
+            "goodsname": "iphone 6S 16G",
+            "price": 5500
+        },
+        {
+            "userid": 2,
+            "goodsname": "xiaomi 5S 64G",
+            "price": 1999
+        },
+        {
+            "userid": 3,
+            "goodsname": "meizu MX5 64G",
+            "price": 3299
+        }
+    ]
+}

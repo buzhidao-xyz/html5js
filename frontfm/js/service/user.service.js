@@ -8,9 +8,9 @@ define(["app", "api"], function ($app, $api){
 			getUserListParams: {},
 			userlist: {},
 			getUserList: function (){
-				var url = $api.host + $api.userlist.u;
+				var url = $api.host + $api.user.userlist.u;
 				$http({
-					method: $api.userlist.m,
+					method: $api.user.userlist.m,
 					url: url,
 					params: this.getUserListParams
 				}).success(function (data, status){
@@ -29,9 +29,9 @@ define(["app", "api"], function ($app, $api){
 				"age": 0
 			},
 			getUserProfile: function (){
-				var url = $api.host + $api.userprofile.u;
+				var url = $api.host + $api.user.userprofile.u;
 				$http({
-					method: $api.userlist.m,
+					method: $api.user.userlist.m,
 					url: url,
 					params: {}
 				}).success(function (data, status){
