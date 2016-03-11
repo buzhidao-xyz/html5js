@@ -1,5 +1,7 @@
 //定义模块UserController
-define(["app", "commoncontroller", "userservice"], function ($app){
+define(["require", "app", "commoncontroller", "userservice"], function ($require, $app){
+	requirejs(["jquery.purl"]);
+	
 	var WebApp = $app.WebApp;
 
 	var UserListControllerInit = function (){
@@ -7,12 +9,11 @@ define(["app", "commoncontroller", "userservice"], function ($app){
 		WebApp.controller("UserListController", ['$scope', '$controller', 'UserService', function ($scope, $controller, $UserService) {
 			var CommonController = $controller('CommonController', {$scope: $scope});
 
+			$UserService.getUserList();
 			//监听事件 - getUserList.success
 			$scope.$on('getUserList.success', function (event, d){
 				$scope.$userlist = $UserService.userlist;
 			});
-
-			$UserService.getUserList();
 		}]);
 	}
 
@@ -21,13 +22,13 @@ define(["app", "commoncontroller", "userservice"], function ($app){
 		WebApp.controller("UserProfileController", ['$scope', '$controller', 'UserService', function ($scope, $controller, $UserService) {
 			var CommonController = $controller('CommonController', {$scope: $scope});
 
-			$scope.$on('getUserProfile.success', function (event, d){
-				$scope.$userprofile = $UserService.userprofile;
-			});
-
 			//获取userprofile
 			var getUserProfile = function (){
 				$UserService.getUserProfile();
+				//监听事件 - getUserProfile.success
+				$scope.$on('getUserProfile.success', function (event, d){
+					$scope.$userprofile = $UserService.userprofile;
+				});
 			}();
 		}]);
 	}
