@@ -8,9 +8,9 @@ define(["require", "angular", "angular-route", "angular-cookies"], function (req
 	// }]);
 
     //文档加载完成 启动angular.module-WebApp
-    angular.element(document).ready(function() {
-        angular.bootstrap(document, ['WebApp']);
-    });
+    // angular.element(document).ready(function() {
+    //     angular.bootstrap(document, ['WebApp']);
+    // });
 
 	//返回模块对象
 	return {

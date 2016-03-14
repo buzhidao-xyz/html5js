@@ -4,6 +4,7 @@ requirejs.config({
 	//包名-路径
 	paths: {
 		"app": "app",
+		"boot": "boot",
 		"function": "function",
 		"jquery": "../../assets/jquery/jquery-2.1.4.min",
 		"jquery.purl": "../../assets/jquery/jquery.purl",

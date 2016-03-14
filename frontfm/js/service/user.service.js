@@ -5,14 +5,13 @@ define(["app", "api"], function ($app, $api){
 	WebApp.service('UserService', ['$rootScope', '$http', function ($rootScope, $http){
 		var Service = {
 			//getUserList
-			getUserListParams: {},
 			userlist: {},
-			getUserList: function (){
+			getUserList: function (param){
 				var url = $api.host + $api.user.userlist.u;
 				$http({
 					method: $api.user.userlist.m,
 					url: url,
-					params: this.getUserListParams
+					params: param
 				}).success(function (data, status){
 					Service.userlist = data.userlist;
 
@@ -28,12 +27,12 @@ define(["app", "api"], function ($app, $api){
 				"username": "",
 				"age": 0
 			},
-			getUserProfile: function (){
+			getUserProfile: function (param){
 				var url = $api.host + $api.user.userprofile.u;
 				$http({
 					method: $api.user.userlist.m,
 					url: url,
-					params: {}
+					params: param
 				}).success(function (data, status){
 					Service.userprofile = data;
 

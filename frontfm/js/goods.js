@@ -1,6 +1,6 @@
 //goods.js
 requirejs(['./config'], function (){
-	requirejs(['goodscontroller'], function ($goodscontroller){
-        $goodscontroller.GoodsControllerInit();
+	requirejs(["app", "goodscontroller"], function ($goodscontroller){
+        requirejs(["boot"]);
 	});
 });
