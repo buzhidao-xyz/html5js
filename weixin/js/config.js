@@ -12,6 +12,7 @@ requirejs.config({
 		"angular-cookies": "../../assets/angular-1.4.2/angular-cookies.min",
 		"commoncontroller": "controller/common.controller",
 		"indexcontroller": "controller/index.controller",
+		"articlecontroller": "controller/article.controller",
 		"articleservice": "service/article.service"
 	},
 	//包依赖
