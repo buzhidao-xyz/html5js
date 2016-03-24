@@ -9,19 +9,19 @@ define(["require", "angular", "angular-route", "angular-cookies"], function (req
 		$routeProvider
 		.when('/arclist', {
 			templateUrl: 'arclist.html',
-			controller: ''
+			controller: 'ArticleController'
 		})
 		.when('/archot', {
 			templateUrl: 'archot.html',
-			controller: ''
+			controller: 'ArticleController'
 		})
 		.when('/arcrem', {
 			templateUrl: 'arcrem.html',
-			controller: ''
+			controller: 'ArticleController'
 		})
 		.when('/arcprofile/:arcid', {
 			templateUrl: 'arcprofile.html',
-			controller: ''
+			controller: 'ArticleController'
 		})
 		.otherwise({
         	redirectTo: '/arclist'
