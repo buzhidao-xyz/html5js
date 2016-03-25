@@ -2,7 +2,7 @@
 <div class="bd">
 	<div class="weui_cells_title">全部文章</div>
     <div class="weui_cells weui_cells_access">
-        <a class="weui_cell" href="#/arcprofile/{{$article.id}}" ng-repeat="$article in $articlelist">
+        <a class="weui_cell" href="#/arcprofile?arcid={{$article.id}}" ng-repeat="$article in $articlelist">
             <div class="weui_cell_bd weui_cell_primary">
                 <p class="ng-cloak" ng-cloak>{{$article.title}}</p>
             </div>

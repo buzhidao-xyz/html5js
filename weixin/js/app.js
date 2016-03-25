@@ -19,7 +19,7 @@ define(["require", "angular", "angular-route", "angular-cookies"], function (req
 			templateUrl: 'arcrem.html',
 			controller: 'ArticleController'
 		})
-		.when('/arcprofile/:arcid', {
+		.when('/arcprofile', {
 			templateUrl: 'arcprofile.html',
 			controller: 'ArticleController'
 		})
