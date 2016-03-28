@@ -23,6 +23,10 @@ define(["require", "angular", "angular-route", "angular-cookies"], function (req
 			templateUrl: 'arcprofile.html',
 			controller: 'ArticleController'
 		})
+		.when('/user', {
+			templateUrl: 'user.html',
+			controller: 'UserController'
+		})
 		.otherwise({
         	redirectTo: '/arclist'
     	});
