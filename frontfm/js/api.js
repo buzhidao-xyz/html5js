@@ -4,17 +4,17 @@ define([], function (){
         user: {
             userlist: {
                 m: "get",
-                u: "api/userlist.json"
+                u: "api/frontfm/userlist.json"
             },
             userprofile: {
                 m: "get",
-                u: "api/userprofile.json"
+                u: "api/frontfm/userprofile.json"
             }
         },
         goods: {
             goodslist: {
                 m: "get",
-                u: "api/goodslist.json"
+                u: "api/frontfm/goodslist.json"
             }
         }
     }

@@ -1,12 +1,18 @@
 <div class="bd" ng-include="'searchbar.html'"></div>
 <div class="bd">
-	<div class="weui_cells_title">热门文章</div>
-    <div class="weui_cells weui_cells_access">
-        <a class="weui_cell" href="#/arcprofile?arcid={{$article.id}}" ng-repeat="$article in $articlehotlist">
-            <div class="weui_cell_bd weui_cell_primary">
-                <p class="ng-cloak" ng-cloak>{{$article.title}}</p>
-            </div>
-            <div class="weui_cell_ft"></div>
-        </a>
+    <div class="weui_panel weui_panel_access">
+        <div class="weui_panel_hd">热门文章</div>
+        <div class="weui_panel_bd">
+            <a class="weui_media_box weui_media_appmsg" href="#/arcprofile?arcid={{$article.id}}" ng-repeat="$article in $articlehotlist">
+                <div class="weui_media_hd">
+                    <img alt="" src="./images/weui-index.png" class="weui_media_appmsg_thumb">
+                </div>
+                <div class="weui_media_bd">
+                    <h4 class="weui_media_title">{{$article.title}}</h4>
+                    <p class="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                </div>
+            </a>
+        </div>
+        <a href="javascript:void(0);" class="weui_panel_ft">查看更多</a>
     </div>
 </div>

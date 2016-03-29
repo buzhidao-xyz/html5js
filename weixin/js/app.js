@@ -28,8 +28,8 @@ define(["require", "angular", "angular-route", "angular-cookies"], function (req
 			controller: 'UserController'
 		})
 		.otherwise({
-        	redirectTo: '/arclist'
-    	});
+			redirectTo: '/arclist'
+		});
 	}]);
 
 	//返回模块对象

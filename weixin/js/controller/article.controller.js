@@ -1,6 +1,9 @@
-//index.controller.js
+//article.controller.js
 define(["require", "app", "function", "commoncontroller", "articleservice"], function ($require, $app, $function){
 	var WebApp = $app.WebApp;
+
+	//searchbar初始化
+	$function.searchbar();
 
 	WebApp.controller('ArticleController', [
 		'$scope',

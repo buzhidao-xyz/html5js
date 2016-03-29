@@ -4,19 +4,25 @@ define([], function (){
         article: {
             articlelist: {
                 m: "get",
-                u: "api/articlelist.json"
+                u: "api/weixin/articlelist.json"
             },
             articlehotlist: {
                 m: "get",
-                u: "api/articlehotlist.json"
+                u: "api/weixin/articlehotlist.json"
             },
             articleremlist: {
                 m: "get",
-                u: "api/articleremlist.json"
+                u: "api/weixin/articleremlist.json"
             },
             articleprofile: {
             	m: "get",
-                u: "api/articleprofile.json"
+                u: "api/weixin/articleprofile.json"
+            }
+        },
+        user: {
+            userprofile: {
+                m: "get",
+                u: "api/weixin/userprofile.json"
             }
         }
     }
