@@ -125,7 +125,13 @@ body,html {
 .search_show {
 	display:none;
 	margin-top:0;
-	font-size:14px
+	font-size:14px;
+	position: absolute;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 45px;
 }
 .search_show .weui_cell_bd {
 	padding:2px 0 2px 20px;

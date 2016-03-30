@@ -2,9 +2,6 @@
 define(["require", "app", "function", "commoncontroller", "articleservice"], function ($require, $app, $function){
 	var WebApp = $app.WebApp;
 
-	//searchbar初始化
-	$function.searchbar();
-
 	WebApp.controller('ArticleController', [
 		'$scope',
 		'$controller',
@@ -14,6 +11,37 @@ define(["require", "app", "function", "commoncontroller", "articleservice"], fun
 		'ArticleService',
 		function ($scope, $controller, $route, $routeParams, $location, $ArticleService){
 			var CommonController = $controller('CommonController', {$scope: $scope});
+
+			//搜索searchbar初始化
+			$scope.searchbarInit = function (){
+				//获取搜索焦点
+				var $weuiSearchBar = $('#search_bar');
+				$weuiSearchBar.addClass('weui_search_focusing');
+
+				//开始输入
+				$("#search_input").on('input', function (){
+					var $searchShow = $("#search_show");
+                    if ($(this).val()) {
+                        $searchShow.show();
+                    } else {
+                        $searchShow.hide();
+                    }
+				});
+
+				//取消搜索
+				$("#search_cancel").on('click', function (event){
+					$("#search_show").hide();
+	                $('#search_input').val('');
+
+                    $weuiSearchBar.removeClass('weui_search_focusing');
+				});
+
+				//清除内容
+				$("#search_clear").on('click', function (){
+					$("#search_show").hide();
+	                $('#search_input').val('');
+				});
+			};
 
 			//获取全部
 			$scope.getArticleList = function (){
