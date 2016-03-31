@@ -5,6 +5,7 @@ define([
 	"function",
 	"commoncontroller",
 	"articlecontroller",
+	"elementscontroller",
 	"usercontroller"
 	], function ($require, $app, $function){
 		var WebApp = $app.WebApp;

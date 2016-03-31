@@ -55,32 +55,6 @@ requirejs(["app", "api"], function ($app, $api){
 				});
 			},
 
-			//获取推荐文章
-			articleremlist: [],
-			getArticleRemList: function (params, data){
-				var url = $api.host + $api.article.articleremlist.u;
-				$http({
-					method: $api.article.articleremlist.m,
-					url: url,
-					params: params,
-					data: data
-				}).success(function (data, status){
-					Service.articleremlist = [];
-					for (index in data.articlelist) {
-						Service.articleremlist.push({
-							"id": data.articlelist[index].id,
-							"title": data.articlelist[index].title,
-							"content": data.articlelist[index].content,
-							"publishtime": data.articlelist[index].publishtime,
-						});
-					}
-
-					$rootScope.$broadcast('getArticleRemList.success');
-				}).error(function (data, status){
-					$rootScope.$broadcast('apiRequest.failed');
-				});
-			},
-
 			//获取文章详情
 			articleprofile: {},
 			getArticleProfile: function (params, data){

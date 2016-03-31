@@ -16,7 +16,9 @@ requirejs.config({
 		"articlecontroller": "controller/article.controller",
 		"articleservice": "service/article.service",
 		"usercontroller": "controller/user.controller",
-		"userservice": "service/user.service"
+		"userservice": "service/user.service",
+		"elementscontroller": "controller/elements.controller",
+		"elementsservice": "service/elements.service"
 	},
 	//包依赖
 	shim: {

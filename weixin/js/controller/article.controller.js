@@ -63,16 +63,6 @@ define(["require", "app", "function", "commoncontroller", "articleservice"], fun
 				});
 			};
 
-			//获取推荐文章
-			$scope.getArticleRemList = function (){
-				//service交互 - getArticleRemList
-				$ArticleService.getArticleRemList();
-				//监听事件 - getArticleRemList.success
-				$scope.$on('getArticleRemList.success', function (event, d){
-					$scope.$articleremlist = $ArticleService.articleremlist;
-				});
-			};
-
 			//获取文章详情
 			$scope.getArticleProfile = function (){
 				var params = $location.search();
@@ -94,9 +84,6 @@ define(["require", "app", "function", "commoncontroller", "articleservice"], fun
 					break;
 				case '/archot':
 					$scope.getArticleHotList();
-					break;
-				case '/arcrem':
-					$scope.getArticleRemList();
 					break;
 				case '/arcprofile':
 					$scope.getArticleProfile();

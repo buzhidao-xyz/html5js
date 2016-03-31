@@ -15,10 +15,6 @@ define(["require", "angular", "angular-route", "angular-cookies"], function (req
 			templateUrl: 'archot.html',
 			controller: 'ArticleController'
 		})
-		.when('/arcrem', {
-			templateUrl: 'arcrem.html',
-			controller: 'ArticleController'
-		})
 		.when('/arcprofile', {
 			templateUrl: 'arcprofile.html',
 			controller: 'ArticleController'
@@ -26,6 +22,14 @@ define(["require", "angular", "angular-route", "angular-cookies"], function (req
 		.when('/user', {
 			templateUrl: 'user.html',
 			controller: 'UserController'
+		})
+		.when('/elements', {
+			templateUrl: 'elements.html',
+			controller: 'ElementsController'
+		})
+		.when('/buttons', {
+			templateUrl: 'buttons.html',
+			controller: 'ElementsController'
 		})
 		.otherwise({
 			redirectTo: '/arclist'
