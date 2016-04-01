@@ -80,6 +80,11 @@ define(["require", "app", "function", "commoncontroller", "elementsservice"], fu
                     $dialog.hide();
                 });
 			}
+
+			//显示ActionSheet
+			$scope.showActionSheet = function (){
+				
+			}
 		}
 	])
 });

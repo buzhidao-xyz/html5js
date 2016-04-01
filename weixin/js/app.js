@@ -47,6 +47,10 @@ define(["require", "angular", "angular-route", "angular-cookies"], function (req
 			templateUrl: 'msg.html',
 			controller: 'ElementsController'
 		})
+		.when('/actionsheet', {
+			templateUrl: 'actionsheet.html',
+			controller: 'ElementsController'
+		})
 		.otherwise({
 			redirectTo: '/arclist'
 		});
