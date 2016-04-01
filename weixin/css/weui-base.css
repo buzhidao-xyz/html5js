@@ -18,7 +18,7 @@ body,html {
 .page {
 	overflow-y:auto;
 	-webkit-overflow-scrolling:touch;
-	opacity:0;
+	/*opacity:0;*/
 	bottom: 55px;
 }
 .hd {
@@ -189,4 +189,19 @@ to {
 .page.slideOut {
 	-webkit-animation:b .2s forwards;
 	animation:b .2s forwards
+}
+
+/*******loading-animation******/
+.loadingbox {
+    position: absolute;
+	text-align: center;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    margin-left: -75px;
+    margin-top: -75px;
+    display: block;
+    width: 150px;
+    height: 150px;
 }

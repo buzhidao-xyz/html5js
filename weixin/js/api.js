@@ -24,6 +24,12 @@ define([], function (){
                 m: "get",
                 u: "api/weixin/userprofile.json"
             }
+        },
+        cell: {
+            celllist: {
+                m: "get",
+                u: "api/weixin/celllist.json"
+            }
         }
     }
 });

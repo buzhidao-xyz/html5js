@@ -11,11 +11,32 @@
 	<link href="./css/weui-base.css" rel="stylesheet" type="text/css">
 	<link href="./css/common.css" rel="stylesheet" type="text/css">
 
+	<link href="../assets/css/loading/progress-10/css/style.css" rel="stylesheet" type="text/css">
+
+	<link href="../assets/plugin/pagetrans/css/animations.css" rel="stylesheet" type="text/css">
+
+	<!--
+	<link href="../assets/plugin/pace-0.7.6/themes/pace-theme-center-circle.css" rel="stylesheet" />
+	<script src="../assets/plugin/pace-0.7.6/pace.min.js"></script>
+	-->
+
 	<script src="../assets/js/require-2.1.11.min.js" data-main="js/index.js"></script>
 </head>
 
 <body ng-controller="IndexController">
 <div class="container">
+	<!-- loading animation -->
+	<div id="loadingbox" class="loadingbox">
+		<div id="caseRouge">
+			<div id="load">
+				<p>loading ...</p>
+			</div>
+			<div id="top"></div>
+			<div id="left"></div>
+			<div id="right"></div>
+		</div>
+	</div>
+	<!-- /loading animation -->
 	<div class="weui_tab">
 		<div class="weui_tab_bd" ng-view></div>
 		<div class="weui_tabbar">
