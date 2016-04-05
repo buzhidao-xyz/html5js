@@ -81,9 +81,48 @@ define(["require", "app", "function", "commoncontroller", "elementsservice"], fu
                 });
 			}
 
+			//progress
+			$scope.doUpload = function (){
+				if ($(this).hasClass('weui_btn_disabled')) {
+                    return;
+                }
+
+                $(this).addClass('weui_btn_disabled');
+
+                var progress = 0;
+                var $progress = $('.js_progress');
+
+                function next() {
+                    $progress.css({width: progress + '%'});
+                    progress = ++progress % 100;
+                    setTimeout(next, 30);
+                }
+
+                next();
+			}
+
 			//显示ActionSheet
 			$scope.showActionSheet = function (){
-				
+				var mask = $('#mask');
+                var weuiActionsheet = $('#weui_actionsheet');
+                weuiActionsheet.addClass('weui_actionsheet_toggle');
+                mask.show().addClass('weui_fade_toggle').one('click', function () {
+                    hideActionSheet(weuiActionsheet, mask);
+                });
+                $('#actionsheet_cancel').one('click', function () {
+                    hideActionSheet(weuiActionsheet, mask);
+                });
+                weuiActionsheet.unbind('transitionend').unbind('webkitTransitionEnd');
+
+                function hideActionSheet(weuiActionsheet, mask) {
+                    weuiActionsheet.removeClass('weui_actionsheet_toggle');
+                    mask.removeClass('weui_fade_toggle');
+                    weuiActionsheet.on('transitionend', function () {
+                        mask.hide();
+                    }).on('webkitTransitionEnd', function () {
+                        mask.hide();
+                    })
+                }
 			}
 		}
 	])

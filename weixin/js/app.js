@@ -31,8 +31,16 @@ define(["require", "angular", "angular-route", "angular-cookies"], function (req
 			templateUrl: 'form.html',
 			controller: 'ElementsController'
 		})
+		.when('/icons', {
+			templateUrl: 'icons.html',
+			controller: 'ElementsController'
+		})
 		.when('/buttons', {
 			templateUrl: 'buttons.html',
+			controller: 'ElementsController'
+		})
+		.when('/cell', {
+			templateUrl: 'cell.html',
 			controller: 'ElementsController'
 		})
 		.when('/toast', {
@@ -45,6 +53,10 @@ define(["require", "angular", "angular-route", "angular-cookies"], function (req
 		})
 		.when('/msg', {
 			templateUrl: 'msg.html',
+			controller: 'ElementsController'
+		})
+		.when('/progress', {
+			templateUrl: 'progress.html',
 			controller: 'ElementsController'
 		})
 		.when('/actionsheet', {
